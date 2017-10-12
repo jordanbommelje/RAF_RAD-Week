@@ -1,0 +1,101 @@
+#section-rad-week {
+	padding: 100px 0;
+	
+	.logo {
+		padding: 50px 0;
+	}
+	:before {
+		top: 0;
+		background: url('assets/img/logo_top_left.svg');
+	}
+	:after {
+		background: url('assets/img/logo_bottom_right.svg');
+	}
+}
+
+#section-header {
+	background-color: $raf_blue;
+	padding: 20px 0;
+}
+
+#section-main-event {
+	background-color: $white;
+	padding: 50px 0;
+	color: $black;
+	img {
+		padding-bottom: 20px;
+	}
+	.calendar-box {
+		background: $raf_blue;
+		color: $white;
+		padding: 20px 0;
+		
+		.day {
+			text-align: center;
+			font-size: 78pt;
+			font-weight: 700;
+			line-height: 1;
+		}
+		.month {
+			text-align: center;
+			font-size: 28pt;
+			font-weight: 800;
+		}
+	}
+}
+#section-event {
+	background-color: $black;
+	padding: 50px 0;
+	color: $white;
+	.calendar-box {
+		background: $raf_blue;
+		color: $white;
+		padding: 20px 0;
+		
+		.time-from {
+			text-align: center;
+			font-size: 54pt;
+			font-weight: 600;
+			line-height: 1.25;
+		}
+		.divider {
+			hr { 
+			  border : 0;
+			  width: 30%;
+			  height: 5px; 
+			  margin-top: 5px;
+			  margin-bottom: 5px;
+			  background-color: #fff;
+			  border-radius: 100px 100px 100px 100px;
+			}
+		}
+		.time-to {
+			text-align: center;
+			font-size: 54pt;
+			font-weight: 600;
+			line-height: 1.25;
+		}
+	}
+}
+
+.event-details {
+	font-size: 18pt;
+	line-height: 1.25;
+	font-weight: 700;
+	&.orange {
+		color: $raf_orange;
+	}
+	&.black {
+		color: $black;
+	}
+}
+
+.get-tickets {
+	margin: 15px 0;
+	.button {
+		@include button(true, $raf_orange, scale-color($button-background, $lightness: -15%), $white, solid);
+		padding: .5em 0;
+		font-size: 24pt;
+		font-weight: 800;
+	}
+}
