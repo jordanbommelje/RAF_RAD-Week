@@ -1,26 +1,57 @@
+section {
+	@include breakpoint(medium up) {
+		padding: 100px 0;	
+	}
+	@include breakpoint(small only) {
+		padding: 20px 0;
+		text-align: center;	
+	}
+}
+
 #section-rad-week {
-	padding: 100px 0;
+	
+	@include breakpoint(medium up) {
+		padding-top: 0!important;	
+		padding-bottom: 0!important;	
+	}
+	
+	#header {
+		padding: 0 0 40px 0;
+	}
+	
+	overflow-x: hidden;
 	
 	.logo {
-		padding: 50px 0;
+		padding: 40px 0;
 	}
-	:before {
-		top: 0;
-		background: url('assets/img/logo_top_left.svg');
+
+	.top-graphic {
+		max-height: 120px;
 	}
-	:after {
-		background: url('assets/img/logo_bottom_right.svg');
+	.bottom-graphic {
+		max-height: 120px;
+		overflow: hidden;
+		right: 0;
 	}
+
+	img.rotate {
+	    -ms-transform: rotate(180deg); /* IE 9 */
+	    -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+	    transform: rotate(180deg);
+	}
+
 }
 
 #section-header {
 	background-color: $raf_blue;
 	padding: 20px 0;
+	@include breakpoint(small only) {
+		text-align: center;
+	}
 }
 
 #section-main-event {
 	background-color: $white;
-	padding: 50px 0;
 	color: $black;
 	img {
 		padding-bottom: 20px;
@@ -41,9 +72,18 @@
 			font-size: 28pt;
 			font-weight: 800;
 		}
+		
+		@include breakpoint(medium only) {
+			.month {
+				font-size: 1.8rem;
+			}
+			.day {
+				font-size: 4rem;
+			}
+		}
 	}
 }
-#section-event {
+#section-event, #main-event {
 	background-color: $black;
 	padding: 50px 0;
 	color: $white;
@@ -52,7 +92,7 @@
 		color: $white;
 		padding: 20px 0;
 		
-		.time-from {
+		.time-from, .time-to {
 			text-align: center;
 			font-size: 54pt;
 			font-weight: 600;
@@ -69,24 +109,25 @@
 			  border-radius: 100px 100px 100px 100px;
 			}
 		}
-		.time-to {
-			text-align: center;
-			font-size: 54pt;
-			font-weight: 600;
-			line-height: 1.25;
-		}
 	}
+}
+#main-event {
+	padding: 50px 0 0 0;
 }
 
 .event-details {
 	font-size: 18pt;
-	line-height: 1.25;
+	line-height: 1.22;
 	font-weight: 700;
+	padding: 5px 0;
 	&.orange {
 		color: $raf_orange;
 	}
 	&.black {
 		color: $black;
+	}
+	img.social {
+		padding: 10px 0;
 	}
 }
 
@@ -94,8 +135,26 @@
 	margin: 15px 0;
 	.button {
 		@include button(true, $raf_orange, scale-color($button-background, $lightness: -15%), $white, solid);
-		padding: .5em 0;
-		font-size: 24pt;
-		font-weight: 800;
+
+		@include breakpoint(medium up) {
+			padding: .5em 0;
+			font-size: 24pt;
+			font-weight: 800;
+		}
+		@include breakpoint(small only) {
+			padding: .25em 0;
+			font-size: 18pt;
+			font-weight: 700;
+		}
+	}
+}
+
+#footer {
+	background-color: $white;
+	
+	p {
+		color: $black;
+		font-size: 12pt;
+		text-align: center;	
 	}
 }

@@ -10,3 +10,11 @@ import Foundation from 'foundation-sites';
 
 
 $(document).foundation();
+
+$( document ).ready(function() {
+	
+	$('.expand-details').on('click', function(e){
+	  $(this).parent().toggleClass('open');
+	});
+	
+});

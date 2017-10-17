@@ -1,0 +1,45 @@
+.expand-details {
+//   border: 0.125rem solid currentColor;
+//   border-radius: 0.125rem;
+//   color: inherit;
+  cursor: pointer;
+  margin: 1em auto;
+  padding: 0 3rem 0 0;
+  position: relative;
+//  text-transform: uppercase;
+//  width: 10em;
+}
+.expand-details::before, .expand-details::after {
+  position: absolute;
+  top: 50%;
+  right: 1.4375rem;
+  border-radius: 0.125rem 0 0 0.125rem;
+  background-color: $raf_orange;
+  content: '';
+  color: $raf_orange;
+  display: block;
+  height: 0.125rem;
+  -webkit-transition: width .25s, -webkit-transform .25s ease-in-out;
+  transition: width .25s, -webkit-transform .25s ease-in-out;
+  transition: transform .25s ease-in-out, width .25s;
+  transition: transform .25s ease-in-out, width .25s, -webkit-transform .25s ease-in-out;
+  -webkit-transform: rotate(30deg) translateX(0.03125rem);
+          transform: rotate(30deg) translateX(0.03125rem);
+  -webkit-transform-origin: right center;
+          transform-origin: right center;
+  width: 0.625rem;
+}
+.open .expand-details::before, .open .expand-details::after {
+  border-radius: 0.125rem;
+  -webkit-transform: rotate(45deg) translateX(0.5rem);
+          transform: rotate(45deg) translateX(0.5rem);
+  width: 1rem;
+}
+.expand-details::after {
+  -webkit-transform: rotate(150deg) translateX(0.03125rem);
+          transform: rotate(150deg) translateX(0.03125rem);
+}
+.open .expand-details::after {
+  -webkit-transform: rotate(135deg) translateX(0.5rem);
+          transform: rotate(135deg) translateX(0.5rem);
+}

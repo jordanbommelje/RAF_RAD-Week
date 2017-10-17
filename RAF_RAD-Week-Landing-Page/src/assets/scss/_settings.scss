@@ -82,7 +82,7 @@ $black: #000000;
 $white: #ffffff;
 $body-background: $black;
 $body-font-color: $white;
-$body-font-family: 'Nunito', Helvetica, Roboto, Arial, sans-serif;
+$body-font-family: 'Nunito', Roboto, Arial, sans-serif;
 $body-antialiased: true;
 $global-margin: 1rem;
 $global-padding: 1rem;
@@ -156,7 +156,7 @@ $header-styles: (
   ),
 );
 $header-text-rendering: optimizeLegibility;
-$small-font-size: 80%;
+$small-font-size: 60%;
 $header-small-font-color: $medium-gray;
 $paragraph-lineheight: 1.6;
 $paragraph-margin-bottom: 1rem;
@@ -222,13 +222,13 @@ $input-error-font-weight: $global-weight-bold;
 // 7. Accordion
 // ------------
 
-$accordion-background: $white;
+$accordion-background: transparent; //$white;
 $accordion-plusminus: true;
 $accordion-title-font-size: rem-calc(22);
 $accordion-item-color: $raf_orange;
 $accordion-item-background-hover: none; //$light-gray;
 $accordion-item-padding: 1.25rem 0rem;
-$accordion-content-background: $white;
+$accordion-content-background: transparent; //$white;
 $accordion-content-border: none;//1px solid $light-gray;
 $accordion-content-color: $body-font-color;
 $accordion-content-padding: 1rem;
