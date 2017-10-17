@@ -17,6 +17,10 @@ h2 {
 	&.white {
 		color: $white;
 	}
+	&.presenter {
+		color: $white;
+		margin: 0;
+	}
 }
 h3 {
 	font-weight: 900;
@@ -24,6 +28,18 @@ h3 {
 	font-size: 20pt;
 	&.white {
 		color: $white;
+	}
+	.presenter-details {
+		font-size: .6em;
+		color: $white;
+		line-height: 1.25em;
+		vertical-align: middle;
+	}
+	.divider {
+		font-weight: 400;
+		font-size: 1.4em;
+		line-height: 1.25em;
+		vertical-align: middle;
 	}
 }
 p {
